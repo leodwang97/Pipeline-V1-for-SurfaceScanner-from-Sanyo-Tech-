@@ -1,0 +1,28 @@
+Folders in root path:
+(1) 'ffmpeg-master-latest-win64-gpl' folder is a tool (open source) for helping us to read MetaData of videos;
+	it's necessary for pipeline code!!!
+
+(2) 'GPS' folder is used to store original GPS data (including X-longitude, Y-latitude, Time-hh:mm:ss);
+	please put GPS data (.xlsx file) in this folder, now, there are two samples file from 20240626 and 0627 survey;
+
+(3) 'Videos2Img' folder is used to store frame images generated from cameras videos
+	if there is no 'Videos2Img' folder, code can generate such folders you need automatically
+
+Notes:
+(1) We need to put original videos in one folder, e.g.:
+             ...\pipeline_test
+	 |__Ca5
+	     |__Ca5_video
+	 |__Ca6
+	     |__Ca6_video
+	 |__Ca7
+	     |__Ca7_video
+	 |__Ca8
+	     |__Ca8_video
+	this path can be set in 'main' function in code, please change it according to your own path
+(2) Some cameras' parameters can also be set in 'main' function, such as: camera number, arrary distance, GPS position in camera array.
+(3) The projected coordinate system can also be modified in the main function. Now, it's 'WGS 84 UTM Zone 54N', for 陸前高田.
+(4) The parameters in generated 'cameras trail' (.CSV file for Metashape) can be set in STEP 6. Usually, however, you can use the default values I've set (Z is 0, and accuracy is 5).
+(5) Other parameters, such as default 'begin time' and 'end time' in the 'Time Setting Window' can be changed in STEP 3 a).
+
+
